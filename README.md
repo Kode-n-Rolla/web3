@@ -9,8 +9,8 @@
 <h2 align='center' id='commands'><em>Help Commands</em></h2>
 <ul>
   <li>Interact with blockchain storage</li>
-  <pre><code>curl -X POST [rpc_address] -H "Content-Type: application/json" -d '{"jsonrpc":"2.0", "method":"eth_getStorageAt", "params": ["[contract_address]","[num_slot-in-hex]","latest"],"id":1}'</code></pre>
-  Need to change <code>[rpc_address]</code>, <code>[contract_address]</code>, <code>[num_slot-in-hex]</code>
+  <pre><code>curl -X POST [RPC_URL] -H "Content-Type: application/json" -d '{"jsonrpc":"2.0", "method":"eth_getStorageAt", "params": ["[CONTRACT_ADDRESS]","[NUM_SLOT-IN-HEX]","latest"],"id":1}'</code></pre>
+  Need to change <code>[RPC_UR]</code>, <code>[CONTRACT_ADDRESS]</code>, <code>[NUM_SLOT-IN-HEX]</code>
 </ul>
 
 <h2 align='center' id='commands'><em>Foundry</em></h2>
