@@ -1,6 +1,6 @@
 # web3
 
-<h1>There are</h1>
+<h3>There are:</h3>
 <ol>
   <li><a href='#commands'>Help Commands</a></li>
   <li><a href='#foundry'>Foundry</a></li>
