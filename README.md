@@ -23,5 +23,6 @@
   <li>hex to decimal</li>
   <pre><code>cast --to-dec [hex]</code></pre>
   <li>hex to string</li>
-  <pre><code></code></pre>
+  <pre><code>cast --abi-decode "myFunc()(string)" 0x00000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000014416e79206b696e64206f6620636f6f6b69657321000000000000000000000000</code></pre>
+  <code>myFunc()</code> is random name. Guess <code>cast</code> just need (unexisted)function in command.
 </ul>
