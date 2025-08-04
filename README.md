@@ -16,6 +16,7 @@
 <h2 align='center' id='commands'><em>Foundry</em></h2>
 <ol>
   <li><a href='#foundry-cast'>Cast</a></li>
+  <li><a href='#foundry-forge'>Forge</a></li>
 </ol>
 
 <h3 id='foundry-cast'> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <ins>Cast</ins></h3>
@@ -25,4 +26,14 @@
   <li>hex to string</li>
   <pre><code>cast --abi-decode "myFunc()(string)" 0x00000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000014416e79206b696e64206f6620636f6f6b69657321000000000000000000000000</code></pre>
   <code>myFunc()</code> is random name. Guess <code>cast</code> just need (unexisted)function in command.
+</ul>
+
+<h3 id='foundry-forge'> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <ins>Forge</ins></h3>
+<ul>
+  <li>Test</li>
+  <ol>
+    <li>Test certain function</li>
+    <pre><code>forge test --match-test testFunctionName -vvv</code></pre>
+    <code>-vvv</code> for deep verbose
+  </ol>
 </ul>
