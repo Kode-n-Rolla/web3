@@ -20,8 +20,8 @@ contract ZombieFactory is Ownable {
     // --- Constants -----------------------------------------------------------
 
     uint256 private constant DNA_DIGITS = 16;
-    uint256 private constant DNA_MODULUS = 10 ** DNA_DIGITS;
-    uint32 private constant COOLDOWN_TIME = 1 days;
+    uint256 internal constant DNA_MODULUS = 10 ** DNA_DIGITS;
+    uint32 internal constant COOLDOWN_TIME = 1 days;
 
     // --- Data structures -----------------------------------------------------
 
