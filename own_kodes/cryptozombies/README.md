@@ -72,8 +72,6 @@ Update index.html → contract address input with your deployed contract address
 
 - ERC-721 compliance: migrate to OpenZeppelin ERC721 (safe transfers, operator approvals)
 
- Frontend:
-
 - Add pending tx status & links to explorer
 
 - Render live events feed (AttackResolved, NewZombie)
