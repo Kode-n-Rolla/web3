@@ -18,7 +18,7 @@ cryptozombies/
 <br>├── frontend/ # Simple HTML/JS front-end
 <br>│ ├── index.html
 <br>│ ├── cryptozombies_abi.js
-<br>│ └── web3.min.js
+<br>│ └── web3.min.js (v1.10.4)
 
 ---
 
