@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CryptoZombies front-end</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="web3.min.js"></script>
+  <script src="cryptozombies_abi.js"></script>
+  <style>
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; padding: 16px; }
+    #status { margin-bottom: 12px; }
+    .row { display: flex; gap: 8px; align-items: center; margin-bottom: 12px; flex-wrap: wrap; }
+    .zombie { border: 1px solid #ddd; border-radius: 8px; padding: 8px 12px; margin-bottom: 8px; }
+    input, button { padding: 6px 10px; }
+    button { cursor: pointer; }
+  </style>
+</head>
+<body>
+  <div id="status">Connect your wallet to begin.</div>
+
+  <div class="row">
+    <button id="connectBtn">Connect Wallet</button>
+    <span id="account"></span>
+    <span id="network"></span>
+  </div>
+
+  <div class="row">
+    <input id="contractAddress" placeholder="Contract address (CryptoZombies)" size="50" />
+    <button id="loadContractBtn">Load Contract</button>
+  </div>
+
+  <div class="row">
+    <input id="zombieName" placeholder="Zombie name" />
+    <button id="createBtn">Create Random Zombie</button>
+  </div>
+
+  <div class="row">
+    <input id="zombieIdFeed" placeholder="Your zombieId" />
+    <input id="kittyId" placeholder="CryptoKitty id" />
+    <button id="feedBtn">Feed on Kitty</button>
+  </div>
+
+  <div class="row">
+    <input id="zombieIdLevel" placeholder="ZombieId to level up" />
+    <button id="levelBtn">Level Up</button>
+    <span id="feeHint"></span>
+  </div>
+
+  <div id="zombies"></div>
+
+  <script>
+    // ---- Globals ----
+    let web3js;
+    let ethereumProvider;
+    let accounts = [];
+    let userAccount = null;
+    let chainId = null;
+    let cryptoZombies = null;
+    let levelUpFee = null; // wei
+
+    // ---- Utils ----
+    const $status = (txt) => $("#status").text(txt);
+
+    async function ensureProvider() {
+      if (window.ethereum) {
+        ethereumProvider = window.ethereum;
+        web3js = new Web3(ethereumProvider);
+        return true;
+      }
+      $status("No Ethereum provider detected. Please install MetaMask.");
+      return false;
+    }
+
+    async function connect() {
+      const ok = await ensureProvider();
+      if (!ok) return;
+
+      try {
+        accounts = await ethereumProvider.request({ method: "eth_requestAccounts" });
+        userAccount = accounts[0] || null;
+        chainId = await ethereumProvider.request({ method: "eth_chainId" });
+
+        $("#account").text(userAccount ? `Account: ${userAccount}` : "(no account)");
+        $("#network").text(`ChainId: ${chainId}`);
+
+        $status("Wallet connected.");
+      } catch (err) {
+        console.error(err);
+        $status(`Failed to connect: ${err.message || err}`);
+      }
+    }
+
+    function bindProviderEvents() {
+      if (!ethereumProvider) return;
+      ethereumProvider.on("accountsChanged", (accs) => {
+        accounts = accs;
+        userAccount = accs[0] || null;
+        $("#account").text(userAccount ? `Account: ${userAccount}` : "(no account)");
+        if (cryptoZombies && userAccount) refreshMyZombies();
+      });
+      ethereumProvider.on("chainChanged", (cid) => {
+        chainId = cid;
+        $("#network").text(`ChainId: ${chainId}`);
+        // force reload to avoid stale provider state
+        window.location.reload();
+      });
+    }
+
+    async function loadContract() {
+      if (!userAccount) {
+        $status("Connect your wallet first.");
+        return;
+      }
+      const addr = $("#contractAddress").val().trim();
+      if (!addr) {
+        $status("Enter the contract address.");
+        return;
+      }
+      try {
+        cryptoZombies = new web3js.eth.Contract(cryptoZombiesABI, addr);
+
+        // subscribe to Transfer events where _to == userAccount
+        cryptoZombies.events.Transfer({ filter: { _to: userAccount } })
+          .on("data", (ev) => {
+            $status("Transfer received — updating your zombies...");
+            refreshMyZombies();
+          })
+          .on("error", console.error);
+
+        // fetch fee from contract if available
+        try {
+          levelUpFee = await cryptoZombies.methods.levelUpFee().call();
+          $("#feeHint").text(`Current fee: ${web3js.utils.fromWei(levelUpFee, "ether")} ETH`);
+        } catch (_) {
+          // levelUpFee may not be public in older builds — ignore
+        }
+
+        $status("Contract loaded. Fetching your zombies…");
+        await refreshMyZombies();
+      } catch (err) {
+        console.error(err);
+        $status(`Failed to load contract: ${err.message || err}`);
+      }
+    }
+
+    async function refreshMyZombies() {
+      if (!cryptoZombies || !userAccount) return;
+      try {
+        const ids = await cryptoZombies.methods.getZombiesByOwner(userAccount).call();
+        await displayZombies(ids || []);
+      } catch (err) {
+        console.error(err);
+        $status(`Failed to fetch zombies: ${err.message || err}`);
+      }
+    }
+
+    async function displayZombies(ids) {
+      $("#zombies").empty();
+      for (const id of ids) {
+        const z = await cryptoZombies.methods.zombies(id).call();
+        const dt = new Date(Number(z.readyTime) * 1000).toLocaleString();
+        $("#zombies").append(`
+          <div class="zombie">
+            <strong>#${id}</strong>
+            <ul>
+              <li>Name: ${z.name}</li>
+              <li>DNA: ${z.dna}</li>
+              <li>Level: ${z.level}</li>
+              <li>Wins: ${z.winCount}</li>
+              <li>Losses: ${z.lossCount}</li>
+              <li>Ready Time: ${dt}</li>
+            </ul>
+          </div>
+        `);
+      }
+      if (ids.length === 0) {
+        $("#zombies").append(`<div>No zombies yet. Create one!</div>`);
+      }
+    }
+
+    async function createRandomZombie(name) {
+      if (!cryptoZombies || !userAccount) return $status("Load contract & connect wallet first.");
+      try {
+        $status("Creating new zombie…");
+        await cryptoZombies.methods.createRandomZombie(name).send({ from: userAccount });
+        $status(`Successfully created ${name}!`);
+        await refreshMyZombies();
+      } catch (err) {
+        console.error(err);
+        $status(`Create failed: ${err.message || err}`);
+      }
+    }
+
+    async function feedOnKitty(zombieId, kittyId) {
+      if (!cryptoZombies || !userAccount) return $status("Load contract & connect wallet first.");
+      try {
+        $status("Feeding on kitty…");
+        await cryptoZombies.methods.feedOnKitty(zombieId, kittyId).send({ from: userAccount });
+        $status("Ate a kitty and spawned a new Zombie!");
+        await refreshMyZombies();
+      } catch (err) {
+        console.error(err);
+        $status(`Feed failed: ${err.message || err}`);
+      }
+    }
+
+    async function levelUp(zombieId) {
+      if (!cryptoZombies || !userAccount) return $status("Load contract & connect wallet first.");
+      try {
+        let value = levelUpFee || web3js.utils.toWei("0.001", "ether"); // fallback to 0.001 ETH
+        $status("Leveling up…");
+        await cryptoZombies.methods.levelUp(zombieId).send({ from: userAccount, value });
+        $status("Level increased!");
+        await refreshMyZombies();
+      } catch (err) {
+        console.error(err);
+        $status(`Level up failed: ${err.message || err}`);
+      }
+    }
+
+    // ---- Wire UI ----
+    $(function () {
+      $("#connectBtn").on("click", connect);
+      $("#loadContractBtn").on("click", loadContract);
+      $("#createBtn").on("click", () => {
+        const name = $("#zombieName").val().trim();
+        if (!name) return $status("Enter a name first.");
+        createRandomZombie(name);
+      });
+      $("#feedBtn").on("click", () => {
+        const zid = $("#zombieIdFeed").val().trim();
+        const kid = $("#kittyId").val().trim();
+        if (!zid || !kid) return $status("Enter zombieId & kittyId.");
+        feedOnKitty(zid, kid);
+      });
+      $("#levelBtn").on("click", () => {
+        const zid = $("#zombieIdLevel").val().trim();
+        if (!zid) return $status("Enter zombieId.");
+        levelUp(zid);
+      });
+    });
+
+    // ---- Init ----
+    (async () => {
+      const ok = await ensureProvider();
+      if (!ok) return;
+      bindProviderEvents();
+      $status("Ready. Connect your wallet.");
+    })();
+  </script>
+</body>
+</html>
