@@ -67,19 +67,34 @@ Then open: http://localhost:1337
 
 Update index.html → contract address input with your deployed contract address.
 
-## 📌 TODO / Roadmap
-- Randomness: replace pseudo-randomness with Chainlink VRF or commit-reveal
+# 📌 TODO / Roadmap
 
-- ERC-721 compliance: migrate to OpenZeppelin ERC721 (safe transfers, operator approvals)
+## Must‑have (next PR)
+- ERC-721 actions in UI: transferFrom, approve, ownerOf, balanceOf (buttons + inputs).
 
-- Add pending tx status & links to explorer
+- Admin mini-panel: kittyContract (view) + setKittyContractAddress, levelUpFee (view) + setLevelUpFee, withdraw (only available to owner).
 
-- Render live events feed (AttackResolved, NewZombie)
+- Feed / Level Up per zombie: “Feed on Kitty” button (enter Kitty ID), Level Up button (uses levelUpFee() from contract).
 
-- Network guard (Sepolia/Goerli check)
+- Activity feed (real-time): subscribe to NewZombie and AttackResolved + show last 5–10 events.
 
-- Gas optimizations: per-owner token indexing to avoid O(n) scans
+- Front-end caching: in-memory Map<id, zombie>; on refresh fetch only new/changed zombies.
 
-- Security: Anti-grief rules for repeated attacks
+- Transaction UX: disable buttons while pending, show status + link to block explorer.
 
+- Network check: warn user if chainId ≠ target network (e.g., Sepolia).
 
+## Nice-to-have (later)
+- Permalink pages: /zombie/:id (zombie details) and /user/:address (user’s army; “Attack this zombie” button).
+
+- Attack UI: modal to pick your zombie (grey out if in cooldown), input “Attack by ID”, and “Attack random” button.
+
+- Welcome flow: if no zombies, show banner “Create your first zombie”.
+
+- More events in UI: display LevelUpFeeUpdated, NameChanged, DnaChanged, Withdrawn.
+
+- Randomness upgrade: future branch for VRF/commit-reveal randomness.
+
+- Owner index: store tokenIds per owner to avoid O(n) lookups.
+
+- Full ERC-721 compliance: migrate to OZ ERC721 (safeTransferFrom, operator approvals, receiver check).
