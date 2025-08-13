@@ -4,6 +4,7 @@
 <ol>
   <li><a href='#commands'>Help Commands</a></li>
   <li><a href='#foundry'>Foundry</a></li>
+  <li><a href='#sol'>Solidity</a></li>
 </ol>
 
 <h2 align='center' id='commands'><em>Help Commands</em></h2>
@@ -13,7 +14,7 @@
   Need to change <code>[RPC_UR]</code>, <code>[CONTRACT_ADDRESS]</code>, <code>[NUM_SLOT-IN-HEX]</code>
 </ul>
 
-<h2 align='center' id='commands'><em>Foundry</em></h2>
+<h2 align='center' id='foundry'><em>Foundry</em></h2>
 <ol>
   <li><a href='#foundry-cast'>Cast</a></li>
   <li><a href='#foundry-forge'>Forge</a></li>
@@ -36,4 +37,10 @@
     <pre><code>forge test --match-test testFunctionName -vvv</code></pre>
     <code>-vvv</code> for deep verbose
   </ol>
+</ul>
+
+<h2 align='center' id='sol'><em>Solidity</em></h2>
+<ul>
+  <li>Compare <code>string</code> type</li>
+    <pre><code>keccak256(abi.encodePacked(string1)) == keccak256(abi.encodePacked(string2))</code></pre>
 </ul>
