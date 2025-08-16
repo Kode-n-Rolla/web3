@@ -26,14 +26,7 @@ forge init nft_challeange
 cd nft_challeange
 ```
 
-### 2. Get latest block
-
-```bash
-cast block-number --rpc-url $SEPOLIA_RPC
-# => 8997426
-```
-
-### 3. Create `.env` file
+### 2. Create `.env` file
 
 ```env
 SEPOLIA_RPC=https://sepolia.infura.io/v3/YOUR_KEY
@@ -44,6 +37,13 @@ FORK_BLOCK=8997426
 Then:
 ```bash
 source .env
+```
+
+### 3. Get latest block
+
+```bash
+cast block-number --rpc-url $SEPOLIA_RPC
+# => 8997426
 ```
 
 ### 4. Get block data
