@@ -5,6 +5,7 @@
   <li><a href='#commands'>Help Commands</a></li>
   <li><a href='#foundry'>Foundry</a></li>
   <li><a href='#sol'>Solidity</a></li>
+  <li><a href='#audit'>Audit</a></li>
 </ol>
 
 <h2 align='center' id='commands'><em>Help Commands</em></h2>
@@ -43,4 +44,12 @@
 <ul>
   <li>Compare <code>string</code> type</li>
     <pre><code>keccak256(abi.encodePacked(string1)) == keccak256(abi.encodePacked(string2))</code></pre>
+</ul>
+
+<h2 align='center' id='audit'><em>Audit</em></h2>
+<ul>
+  <li>Check:</li>
+    <ol>
+      <li>Access Control Vulnerabilities</li>
+    </ol>
 </ul>
