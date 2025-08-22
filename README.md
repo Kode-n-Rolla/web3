@@ -33,11 +33,11 @@
 <h3 id='foundry-forge'> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <ins>Forge</ins></h3>
 <ul>
   <li>Test</li>
-  <ol>
-    <li>Test certain function</li>
-    <pre><code>forge test --match-test testFunctionName -vvv</code></pre>
-    <code>-vvv</code> for deep verbose
-  </ol>
+    <ol>
+      <li>Test certain function</li>
+      <pre><code>forge test --match-test testFunctionName -vvv</code></pre>
+      <code>-vvv</code> for deep verbose
+    </ol>
 </ul>
 
 <h2 align='center' id='sol'><em>Solidity</em></h2>
@@ -51,5 +51,18 @@
   <li>Check:</li>
     <ol>
       <li>Access Control Vulnerabilities</li>
+    </ol>
+  <li><a href='https://owasp.org/www-project-smart-contract-top-10/'>OWASP Smart Contract Top 10</a></li>
+    <ol>
+      <li>Access Control Vulnerabilities</li>
+      <li>Price Oracle Manipulation</li>
+      <li>Logic Errors</li>
+      <li>Lack of Input Validation</li>
+      <li>Reentrancy Attacks</li>
+      <li>Unchecked External Calls</li>
+      <li>Flash Loan Attacks</li>
+      <li>Integer Overflow and Underflow</li>
+      <li>Insecure Randomness</li>
+      <li>Denial of Service (DoS) Attacks</li>
     </ol>
 </ul>
