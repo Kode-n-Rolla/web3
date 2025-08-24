@@ -4,13 +4,17 @@ pragma solidity ^0.8.18;
 import "forge-std/Test.sol";
 import "../src/12-LessonHelper.sol";
 
-/// @title FuzzHellFuncTest
-/// @notice Property-based (fuzz) test that searches for a `uint128` input causing `LessonTwelveHelper.hellFunc` to revert.
-/// @dev
-/// - The helper is deployed fresh in `setUp()`.
-/// - The fuzz test feeds random `uint128` values into `hellFunc`.
-/// - On the first revert caught via `try/catch`, the test logs and writes the input to `./result.json`.
-/// - This file is meant as a standalone exploration tool; it does not solve the full challenge by itself.
+/**
+ * @title FuzzHellFuncTest
+ * @author kode-n-rolla
+ * @notice Property-based (fuzz) test that searches for a `uint128` input causing `LessonTwelveHelper.hellFunc` to revert.
+ * @dev
+    - The helper is deployed fresh in `setUp()`.
+    - The fuzz test feeds random `uint128` values into `hellFunc`.
+    - On the first revert caught via `try/catch`, the test logs and writes the input to `./result.json`.
+    - This file is meant as a standalone exploration tool; it does not solve the full challenge by itself.
+*/
+
 contract FuzzHellFuncTest is Test {
     /// @notice The helper contract under test (created by this test).
     LessonTwelveHelper helper;
@@ -22,7 +26,6 @@ contract FuzzHellFuncTest is Test {
 
     /**
      * @notice Fuzzing entrypoint: Foundry will generate many `number` values automatically.
-     * @author kode-n-rolla
      * @dev
         - If `hellFunc(number)` returns normally, we do nothing (fuzzer continues with other inputs).
         - If it reverts, we log the number, serialize it to JSON, and mark the test as passed.
