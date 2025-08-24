@@ -3,6 +3,7 @@ pragma solidity ^0.8.18;
 
 /**
  * @title SolverContract
+ * @author kode-n-rolla
  * @notice Minimal “solver card” contract used by the LessonTwelve challenge.
  * @dev
   LessonTwelve expects the exploit/solver contract to expose two view functions:
