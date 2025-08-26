@@ -112,9 +112,9 @@ Now all that`s should to do is deploy the <code>SolverContract.sol</code> to Sep
 
 1. Deploy Solver Contract:
 ```
-forge create src/SolverContract.sol:SolverContract \
+forge create src/SolverContract.sol:SolverContract --broadcast \
   --rpc-url $SEPOLIA_RPC \
-  --private-key $PRIVATE_KEY \
+  --private-key $PRIV_KEY \
   --constructor-args $YOUR_ADDRESS 99
 ```
 2. Make a transation
