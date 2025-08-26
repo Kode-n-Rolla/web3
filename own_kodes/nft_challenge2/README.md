@@ -110,6 +110,23 @@ This demonstrates the complete solve flow: deploying a solver card and solving t
 ## 🤚Hands-on
 Now all that`s should to do is deploy the <code>SolverContract.sol</code> to Sepolia Network and solve the challenge!
 
+1. Deploy Solver Contract:
+```
+forge create src/SolverContract.sol:SolverContract \
+  --rpc-url $SEPOLIA_RPC \
+  --private-key $PRIVATE_KEY \
+  --constructor-args $YOUR_ADDRESS 99
+```
+2. Make a transation
+```
+cast send $LESSON_REAL_ADDRESS \
+  "solveChallenge(address,string)" \
+  <ADDRESS_SolverContract> \
+  $TWITTER_HANDLE \
+  --rpc-url $SEPOLIA_RPC \
+  --private-key $PRIVATE_KEY
+```
+
 ## ✅ Summary
 
 <ul>
