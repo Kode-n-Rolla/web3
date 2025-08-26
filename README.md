@@ -38,6 +38,9 @@
       <pre><code>forge test --match-test testFunctionName -vvv</code></pre>
       <code>-vvv</code> for deep verbose
     </ol>
+  <li>Inspect</li>
+    To view storage layout
+    <pre><code>forge inspect CONTRACT_NAME storage-layout</code></pre>
 </ul>
 
 <h2 align='center' id='sol'><em>Solidity</em></h2>
