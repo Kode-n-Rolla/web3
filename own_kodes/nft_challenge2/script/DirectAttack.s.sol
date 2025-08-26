@@ -32,7 +32,7 @@ contract DirectAttack is Script {
 
         address attacker = vm.addr(attackerPrivateKey);
 
-        // The critical property: `getOwner()` returns the attacker's EOA.
+        // The critical property: `getOwner()` returns the solver's EOA.
         SolverContract solver = new SolverContract(attacker, REVERTING_NUMBER);
 
         console2.log("Attacker address:", attacker);
