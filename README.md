@@ -24,10 +24,18 @@
 <h3 id='foundry-cast'> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <ins>Cast</ins></h3>
 <ul>
   <li>hex to decimal</li>
-  <pre><code>cast --to-dec [hex]</code></pre>
+    <pre><code>cast --to-dec [hex]</code></pre>
   <li>hex to string</li>
-  <pre><code>cast --abi-decode "myFunc()(string)" 0x00000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000014416e79206b696e64206f6620636f6f6b69657321000000000000000000000000</code></pre>
-  <code>myFunc()</code> is random name. Guess <code>cast</code> just need (unexisted)function in command.
+    <pre><code>cast --abi-decode "myFunc()(string)" 0x00000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000014416e79206b696e64206f6620636f6f6b69657321000000000000000000000000</code></pre>
+    <code>myFunc()</code> is random name. Guess <code>cast</code> just need (unexisted)function in command.
+  <li>keccak256 with string</li>
+    <pre><code>cast keccak "..."</code></pre>
+  <li>Function signature</li>
+    <pre><code>cast sig "func(uint256,address)"</code></pre>
+  <li>ABI encode with args</li>
+    <pre><code>cast calldata "func(...)" arg1 arg2</code></pre>
+  <li>ABI encode without sig, only args</li>
+    <pre><code>cast calldata "func(...)" arg1 arg2</code></pre>
 </ul>
 
 <h3 id='foundry-forge'> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <ins>Forge</ins></h3>
