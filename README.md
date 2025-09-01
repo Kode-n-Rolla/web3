@@ -58,8 +58,7 @@
 </ul>
 
 <h2 align='center' id='researching'><em>Researching</em></h2>
-<ul>
-  <li><a href='https://owasp.org/www-project-smart-contract-top-10/'>OWASP Smart Contract Top 10</a></li>
+  <details><summary><a href='https://owasp.org/www-project-smart-contract-top-10/'>OWASP Smart Contract Top 10</a></summary>
     <ol>
       <li>Access Control Vulnerabilities</li>
       <li>Price Oracle Manipulation</li>
@@ -71,5 +70,19 @@
       <li>Integer Overflow and Underflow</li>
       <li>Insecure Randomness</li>
       <li>Denial of Service (DoS) Attacks</li>
-    </ol>
-</ul>
+    </ol></details>
+  <details><summary><a href='https://blog.trailofbits.com/2023/08/14/can-you-pass-the-rekt-test/'>The Rekt Test</a></summary>
+    <ol>
+      <li>Do you have all actors, roles, and privileges documented?</li>
+      <li>Do you keep documentation of all the external services, contracts, and oracles you rely on?</li>
+      <li>Do you have a written and tested incident response plan?</li>
+      <li>Do you document the best ways to attack your system?</li>
+      <li>Do you perform identity verification and background checks on all employees?</li>
+      <li>Do you have a team member with security defined in their role?</li>
+      <li>Do you require hardware security keys for production systems?</li>
+      <li>Does your key management system require multiple humans and physical steps?</li>
+      <li>Do you define key invariants for your system and test them on every commit?</li>
+      <li>Do you use the best automated tools to discover security issues in your code?</li>
+      <li>Do you undergo external audits and maintain a vulnerability disclosure or bug bounty program?</li>
+      <li>Have you considered and mitigated avenues for abusing users of your system?</li>
+    </ol></details>
