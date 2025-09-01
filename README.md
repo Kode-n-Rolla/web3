@@ -58,19 +58,8 @@
 </ul>
 
 <h2 align='center' id='researching'><em>Researching</em></h2>
-  <details><summary><a href='https://owasp.org/www-project-smart-contract-top-10/'>OWASP Smart Contract Top 10</a></summary>
-    <ol>
-      <li>Access Control Vulnerabilities</li>
-      <li>Price Oracle Manipulation</li>
-      <li>Logic Errors</li>
-      <li>Lack of Input Validation</li>
-      <li>Reentrancy Attacks</li>
-      <li>Unchecked External Calls</li>
-      <li>Flash Loan Attacks</li>
-      <li>Integer Overflow and Underflow</li>
-      <li>Insecure Randomness</li>
-      <li>Denial of Service (DoS) Attacks</li>
-    </ol></details>
+  <li><a href='https://github.com/Cyfrin/security-and-auditing-full-course-s23/blob/main/minimal-onboarding-questions.md'>Minimal Smart Contract Security Review Onboarding</a></li>
+ 
   <details><summary><a href='https://blog.trailofbits.com/2023/08/14/can-you-pass-the-rekt-test/'>The Rekt Test</a></summary>
     <ol>
       <li>Do you have all actors, roles, and privileges documented?</li>
@@ -88,26 +77,39 @@
     </ol></details>
   <details><summary><a href='https://github.com/nascentxyz/simple-security-toolkit/blob/main/audit-readiness-checklist.md'>Audit Scoping Details</a></summary>
     <ul>
-      <li>If you have a public code repo, please share it here:</li>
-      <li>How many contracts are in scope?:</li>
-      <li>Total SLoC for these contracts?:</li>
-      <li>How many external imports are there?:</li>
-      <li>How many separate interfaces and struct definitions are there for the contracts within scope?:</li>
-      <li>Does most of your code generally use composition or inheritance?:</li>
-      <li>How many external calls?:</li>
+      <li>Public link code repo, if exist</li>
+      <li>How many contracts are in scope?</li>
+      <li>Total SLoC for these contracts?</li>
+      <li>How many external imports are there?</li>
+      <li>How many separate interfaces and struct definitions are there for the contracts within scope?</li>
+      <li>Does most of your code generally use composition or inheritance?</li>
+      <li>How many external calls?</li>
       <li>What is the overall line coverage percentage provided by your tests?:</li>
-      <li>Is there a need to understand a separate part of the codebase / get context in order to audit this part of the protocol?:</li>
-      <li>If so, please describe required context:</li>
-      <li>Does it use an oracle?:</li>
-      <li>Does the token conform to the ERC20 standard?:</li>
-      <li>Do you expect ERC721, ERC777, FEE-ON-TRANSFER, REBASING or any other non-standard ERC will interact with the smart contracts?:</li>
-      <li>Are there any novel or unique curve logic or mathematical models?:</li>
-      <li>Does it use a timelock function?:</li>
-      <li>Is it an NFT?:</li>
-      <li>Does it have an AMM?:</li>
-      <li>Is it a fork of a popular project?:</li>
-      <li>Does it use rollups?:</li>
-      <li>Is it multi-chain?:</li>
-      <li>Does it use a side-chain?:</li>
-      <li>Describe any specific areas you would like addressed. E.g. Please try to break XYZ.":</li>
+      <li>Is there a need to understand a separate part of the codebase / get context in order to audit this part of the protocol?</li>
+      <li>If so, please describe required context</li>
+      <li>Does it use an oracle?</li>
+      <li>Does the token conform to the ERC20 standard?</li>
+      <li>Do you expect ERC721, ERC777, FEE-ON-TRANSFER, REBASING or any other non-standard ERC will interact with the smart contracts?</li>
+      <li>Are there any novel or unique curve logic or mathematical models?</li>
+      <li>Does it use a timelock function?</li>
+      <li>Is it an NFT?</li>
+      <li>Does it have an AMM?</li>
+      <li>Is it a fork of a popular project?</li>
+      <li>Does it use rollups?</li>
+      <li>Is it multi-chain?</li>
+      <li>Does it use a side-chain?</li>
+      <li>Describe any specific areas you would like addressed. E.g. Please try to break XYZ."</li>
     </ul></details>
+    <details><summary><a href='https://owasp.org/www-project-smart-contract-top-10/'>OWASP Smart Contract Top 10</a></summary>
+    <ol>
+      <li>Access Control Vulnerabilities</li>
+      <li>Price Oracle Manipulation</li>
+      <li>Logic Errors</li>
+      <li>Lack of Input Validation</li>
+      <li>Reentrancy Attacks</li>
+      <li>Unchecked External Calls</li>
+      <li>Flash Loan Attacks</li>
+      <li>Integer Overflow and Underflow</li>
+      <li>Insecure Randomness</li>
+      <li>Denial of Service (DoS) Attacks</li>
+    </ol></details>
