@@ -5,6 +5,7 @@
   <li><a href='#commands'>Help Commands</a></li>
   <li><a href='#foundry'>Foundry</a></li>
   <li><a href='#sol'>Solidity</a></li>
+  <li><a href=#tools>Tools</a>
   <li><a href='#researching'>Researching</a></li>
 </ol>
 
@@ -56,6 +57,13 @@
   <li>Compare <code>string</code> type</li>
     <pre><code>keccak256(abi.encodePacked(string1)) == keccak256(abi.encodePacked(string2))</code></pre>
 </ul>
+
+<h2 align='center' id='commands'><em>Tools</em></h2>
+<ol>
+  <li><a href='https://vscodium.com/'>VS Codium</a></li>
+  <li><a href='https://getfoundry.sh/'>Foundry</a></li>
+  <li><a href='https://github.com/AlDanial/cloc'>CLoC</a></li>
+</ol>
 
 <h2 align='center' id='researching'><em>Researching</em></h2>
   <li><a href='https://github.com/Cyfrin/security-and-auditing-full-course-s23/blob/main/minimal-onboarding-questions.md'>Minimal Smart Contract Security Review Onboarding</a></li>
