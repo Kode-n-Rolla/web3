@@ -61,6 +61,9 @@
 <h2 align='center' id='commands'><em>Tools</em></h2>
 <ol>
   <li><a href='https://vscodium.com/'>VS Codium</a></li>
+    <ul>
+      <li><a href='https://github.com/ConsenSysDiligence/vscode-solidity-metrics'>Solidity Metrics extension</a></li>
+    </ul>
   <li><a href='https://getfoundry.sh/'>Foundry</a></li>
   <li><a href='https://github.com/AlDanial/cloc'>CLoC</a></li>
 </ol>
