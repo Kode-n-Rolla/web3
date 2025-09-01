@@ -37,6 +37,8 @@
     <pre><code>cast calldata "func(...)" arg1 arg2</code></pre>
   <li>ABI encode without sig, only args</li>
     <pre><code>cast calldata "func(...)" arg1 arg2</code></pre>
+  <li>Check storage</li>
+    <pre><code>cast storage [CONTRACT_ADDRESS] [NUM_SLOT]</code></pre>
 </ul>
 
 <h3 id='foundry-forge'> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <ins>Forge</ins></h3>
