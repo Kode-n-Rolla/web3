@@ -67,7 +67,7 @@
   <li><a href='https://vscodium.com/'>VS Codium</a></li>
     <ul>
       <li><a href='https://github.com/ConsenSysDiligence/vscode-solidity-metrics'>Solidity Metrics extension</a></li>
-      <li><a href='https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers'>Dev Containers. For isolation</a></li>
+      <li><a href='https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers'>Dev Containers</a>. For isolation</li>
       <li><a href='https://marketplace.visualstudio.com/items?itemName=tintinweb.solidity-visual-auditor'>Solidity Visual Developer</a></li>
     </ul>
   <li><a href='https://getfoundry.sh/'>Foundry</a></li>
