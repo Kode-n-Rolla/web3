@@ -68,9 +68,12 @@
     <ul>
       <li><a href='https://github.com/ConsenSysDiligence/vscode-solidity-metrics'>Solidity Metrics extension</a></li>
       <li><a href='https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers'>Dev Containers. For isolation</a></li>
+      <li><a href='https://marketplace.visualstudio.com/items?itemName=tintinweb.solidity-visual-auditor'>Solidity Visual Developer</a></li>
     </ul>
   <li><a href='https://getfoundry.sh/'>Foundry</a></li>
   <li><a href='https://github.com/AlDanial/cloc'>CLoC</a></li>
+  <li><a href='https://github.com/crytic/slither'>Slither</a></li>
+  <li><a href='https://github.com/Cyfrin/aderyn'>Aderyn</a></li>
 </ol>
 
 <h2 align='center' id='researching'><em>Researching</em></h2>
