@@ -6,7 +6,6 @@ import {IERC721Receiver} from "@openzeppelin/contracts/token/ERC721/IERC721Recei
 
 /**
  * @title Minimal interface for the S4 challenge contract
- * @author kode-n-rolla
  * @notice Only the function used by the attacker is defined here.
  */
 interface IS4 {
@@ -20,6 +19,7 @@ interface IS4 {
 
 /**
  * @title S4 Reentrancy Solver
+ * @author kode-n-rolla
  * @notice Attacker contract that solves the S4 challenge by re-entering `solveChallenge`
  *         and computing the exact RNG within the same transaction.
  * @dev Key ideas:
