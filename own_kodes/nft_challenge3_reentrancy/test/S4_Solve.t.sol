@@ -78,6 +78,7 @@ contract OzRegistry is ICTFRegistry {
 
 /**
  * @title S4_Solve_E2E
+ * @author kode-n-rolla
  * @notice End-to-end tests for the S4 challenge exploit:
  *         - verifies two-step reentrancy flow,
  *         - ensures NFT is minted to the attacker contract,
