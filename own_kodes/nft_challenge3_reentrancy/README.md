@@ -38,7 +38,12 @@ I implement `onERC721Received` so `safeMint` succeeds, then I `sweep721` the tok
 
 <b>Root causes:</b> external call between state transitions; predictable RNG; trusting caller-supplied `owner()`.
 
+## Requirements
+- Foundry
+- OpenZeppelin Contracts (installed via `forge install OpenZeppelin/openzeppelin-contracts`)
+
 ### Attack flow (one transaction)
+First of all copy target contracts and fix imports block.
 
 1. EOA → `SolveContract::solvingChallenge()`
 2. Attacker → `S4::solveChallenge(0, ...)`
@@ -134,7 +139,7 @@ cast call $NFT "ownerOf(uint256)(address)" $ID --rpc-url $SEPOLIA_RPC
 ## Mitigations (what to fix)
 
 - Avoid external calls between state updates and validation (or use a reentrancy guard).
-- Use <a href='https://docs.chain.link/vrf'>ChainlinkVRF</a> for random numbers; don’t rely on timestamp/prevrandao for critical decisions.
+- Use <a href='https://docs.chain.link/vrf'>Chainlink VRF</a> for random numbers; don’t rely on timestamp/prevrandao for critical decisions.
 - Don’t trust msg.sender.owner(): the callee controls its code. If identity matters, redesign the trust boundary.
 
 ## Repo structure
@@ -153,8 +158,4 @@ I didn`t copy target contracts. This repo contains only my own files. You should
 
 ```
 
-## Requirements
-- Foundry (forge/cast)
-- Node RPC (Anvil for local, Infura/Alchemy for Sepolia)
-- OpenZeppelin Contracts (installed via `forge install`)
 
