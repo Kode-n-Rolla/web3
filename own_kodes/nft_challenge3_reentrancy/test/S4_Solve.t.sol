@@ -31,6 +31,7 @@ contract TestNFT is ERC721 {
 
 /**
  * @title OzRegistry
+ * @author kode-n-rolla
  * @notice Test implementation of the ICTFRegistry used for E2E tests.
  * @dev Matches `ICTFRegistry` signatures exactly; optionally can restrict
  *      minting to registered challenge contracts via `isChallenge`.
