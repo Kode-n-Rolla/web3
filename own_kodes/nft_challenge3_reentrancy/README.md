@@ -42,7 +42,7 @@ I implement `onERC721Received` so `safeMint` succeeds, then I `sweep721` the tok
 - Foundry
 - OpenZeppelin Contracts (installed via `forge install OpenZeppelin/openzeppelin-contracts`)
 
-### Attack flow (one transaction)
+## Attack flow (one transaction)
 First of all copy target contracts and fix imports block.
 
 1. EOA → `SolveContract::solvingChallenge()`
@@ -54,7 +54,7 @@ First of all copy target contracts and fix imports block.
 6. S4 (second entry) validates guess → registry mints NFT to attacker → `onERC721Received` fires ✅
 7. After tx: call `sweep721(nft, tokenId)` → NFT → EOA.
 
-## Localy testing (Foundry)
+### Localy testing (Foundry)
 
 ```bash
 forge build
@@ -66,8 +66,7 @@ What the tests cover:
 - Guards: `go()` callable only by S4; `solvingChallenge()` only by owner.
 - Optional debug events (`DebugGuess`, `NftReceived`, `NftSwept`) for traceability.
 
-## Local integration (Anvil)
-
+### Local integration (Anvil)
 
 In one terminal:
 ```bash
@@ -92,7 +91,7 @@ Owner after mint : <SolveContract address>
 Owner after sweep: <your EOA>
 ```
 
-## Sepolia reproduction
+### Sepolia reproduction
 
 Save your next env variables to `.env`:
 - SEPOLIA URL like `SEPOLIA_RPC="https://sepolia.infura.io/v3/<KEY>`
@@ -132,7 +131,7 @@ cast send $ATTACKER "sweep721(address,uint256)" $NFT $ID \
 
 5. Verify ownership
 ```bash
-cast call $NFT "ownerOf(uint256)(address)" $ID --rpc-url $SEPOLIA_RPC
+cast call 0x31801c3e09708549c1b2c9e1cfbf001399a1b9fa "ownerOf(uint256)(address)" $ID --rpc-url $SEPOLIA_RPC
 # => your EOA
 ```
 
