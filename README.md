@@ -137,7 +137,7 @@
       <li>Read docs and understand the project</li>
       <li>Static Analysis (use tools)</li>
       <li>Dynamic analysis (read the target code)</li>
-      <li>Testing (invariant tests -> stateless & statefull fuzzing, check hypotheses)</li>
+      <li>Testing (invariant tests -> stateless & stateful fuzzing, check hypotheses)</li>
       <li>Reporting</li>
     </ol></details>
     
