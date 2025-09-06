@@ -135,9 +135,9 @@
     <details><summary>Methodology</summary>
     <ol>
       <li>Read docs and understand the project</li>
-      <li>Static Analysis</li>
-      <li>Dynamic analysis (read target code, line by line)</li>
-      <li>Testing</li>
+      <li>Static Analysis (use tools)</li>
+      <li>Dynamic analysis (read the target code)</li>
+      <li>Testing (stateless & statefull fuzzing, invariant tests, check hypotheses)</li>
       <li>Reporting</li>
     </ol></details>
     
