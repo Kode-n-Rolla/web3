@@ -20,6 +20,7 @@
 <ol>
   <li><a href='#foundry-cast'>Cast</a></li>
   <li><a href='#foundry-forge'>Forge</a></li>
+  <li><a href='#funcs'>Functions</a></li>
 </ol>
 
 <h3 id='foundry-cast'> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <ins>Cast</ins></h3>
@@ -54,6 +55,19 @@
   <li>Inspect</li>
     To view storage layout
     <pre><code>forge inspect CONTRACT_NAME storage-layout</code></pre>
+</ul>
+
+<h3 id='funcs'> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <ins>Functions</ins></h3>
+<ul>
+  <li><code>bound()</code></li>
+    <p>The <code>bound()</code> function is designed to constrain the input values of fuzz tests within a specified range<p>
+    <p>Usage:</p>
+      The <code>bound()</code> function takes three uint256 arguments:
+      <ol>
+         <li><code>x</code>: The input value from the fuzzer.</li>
+         <li><code>min</code>: The lower bound (inclusive) of the desired range.</li>
+         <li><code>max</code>: The upper bound (inclusive) of the desired range.</li>
+      </ol>
 </ul>
 
 <h2 align='center' id='sol'><em>Solidity</em></h2>
