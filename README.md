@@ -88,6 +88,7 @@
   <li><a href='https://github.com/AlDanial/cloc'>CLoC</a></li>
   <li><a href='https://github.com/crytic/slither'>Slither</a></li>
   <li><a href='https://github.com/Cyfrin/aderyn'>Aderyn</a></li>
+  <li><a href='https://upgradehub.xyz/'>upgradehub.xyz</a> for checking smart contracts changes</li>
 </ol>
 
 <h2 align='center' id='researching'><em>Researching</em></h2>
