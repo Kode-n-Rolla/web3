@@ -41,6 +41,10 @@ I implement `onERC721Received` so `safeMint` succeeds, then I `sweep721` the tok
 ## Requirements
 - Foundry
 - OpenZeppelin Contracts (installed via `forge install OpenZeppelin/openzeppelin-contracts`)
+  - Add following line to `foundry.toml`:
+  ```
+  remappings = ["@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts"]
+  ```
 
 ## Attack flow (one transaction)
 First of all copy target contracts and fix imports block.
