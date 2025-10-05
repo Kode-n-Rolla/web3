@@ -109,7 +109,7 @@ Update enviroment
 
 1. Deploy solver contract:
   ```bash
-  forge create src/SolveContract.sol:SolveContract \
+  forge create src/SolveContract.sol:SolveContract --broadcast \
     --rpc-url $SEPOLIA_RPC --private-key $PRIVATE_KEY \
     --constructor-args $S4
   ```
