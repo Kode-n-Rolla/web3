@@ -160,7 +160,7 @@
       <ul>
         <li>Pragma version, imports, inheritances</li>
         <li>State variables (visability)</li>
-        <li>Focus on `external` and `public` functions</li>
+        <li>Focus on <code>external</code> and <code>public</code> functions</li>
       </ul>
       <li>Testing (invariant tests -> stateless & stateful fuzzing, check hypotheses)</li>
       <li>Reporting</li>
