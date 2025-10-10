@@ -150,8 +150,18 @@
     <details><summary>Methodology</summary>
     <ol>
       <li>Read docs and understand the project</li>
+      <ul>
+        <li>Main functionality</li>
+        <li>Roles</li>
+        <li>Invariants</li>
+      </ul>
       <li>Static Analysis (use tools)</li>
       <li>Dynamic analysis (read the target code)</li>
+      <ul>
+        <li>Pragma version, imports, inheritances</li>
+        <li>State variables (visability)</li>
+        <li>Focus on `external` and `public` functions</li>
+      </ul>
       <li>Testing (invariant tests -> stateless & stateful fuzzing, check hypotheses)</li>
       <li>Reporting</li>
     </ol></details>
