@@ -40,8 +40,10 @@
     <pre><code>cast calldata "func(...)" arg1 arg2</code></pre>
   <li>Check storage</li>
     <pre><code>cast storage [CONTRACT_ADDRESS] [NUM_SLOT] --rpc-url [RPC_URL]</code></pre>
-  <li>Bytes to string</li>
+  <li>Bytes32 to string</li>
     <pre><code>cast parse-bytes32-string [TARGET_BYTES]</code></pre>
+  <li>Bytes4 (signature) to string</li>
+    <pre><code>cast 4byte [sig]</code></pre>
 </ul>
 
 <h3 id='foundry-forge'> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <ins>Forge</ins></h3>
