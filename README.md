@@ -163,6 +163,35 @@
         <li>Pragma version, imports, inheritances</li>
         <li>State variables (visability)</li>
         <li>Focus on <code>external</code> and <code>public</code> functions</li>
+        <details><summary>Steps</summary>
+          <pre># STRUCTURE: FIRST HOURS OF PROTOCOL RESEARCH
+1. ARCHITECTURE
+   - read README and Deployment / addresses
+   - find entrypoints (Router / Core / Vault / Manager)
+   - draw diagramm
+2. TRUST MODEL
+   - who can change and what can be changable (owner, guardian, controller)
+   - where is upgrade, pause, withdraw, mint/burn
+3. USER FLOW
+   - how regular user interact: deposit → stake → claim
+   - which data go to в state
+   - where is external call / callback
+4. SECURITY INVARIANTS
+   - what have to be true: balance >= shares, owner != zero, etc.
+   - what breaks invariants
+5. ATTACK SURFACE
+   - external/public funcs without access-control
+   - all loops (gas DoS)
+   - all places with call.value / transfer / delegatecall / external token
+   - where is state depends on external contracts
+6. CHECKLIST (rest)
+   - Reentrancy
+   - Privilege escalation
+   - Math errors
+   - Oracle manipulation
+   - Initialization / upgrade gaps
+</pre>
+        </details>
       </ul>
       <li>Testing (invariant tests -> stateless & stateful fuzzing, check hypotheses)</li>
       <li>Reporting</li>
