@@ -163,6 +163,7 @@
         <li>Pragma version, imports, inheritances</li>
         <li>State variables (visability)</li>
         <li>Focus on <code>external</code> and <code>public</code> functions</li>
+        <li>Check-Effects-Interactions pattern</li>
         <details><summary>Steps</summary>
           <pre># STRUCTURE: FIRST HOURS OF PROTOCOL RESEARCH
 1. ARCHITECTURE
