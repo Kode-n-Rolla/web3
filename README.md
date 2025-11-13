@@ -161,12 +161,7 @@
       </ul>
       <li>Static Analysis (use tools)</li>
       <li>Dynamic analysis (read the target code)</li>
-      <ul>
-        <li>Pragma version, imports, inheritances</li>
-        <li>State variables (visability)</li>
-        <li>Focus on <code>external</code> and <code>public</code> functions</li>
-        <li>Check-Effects-Interactions pattern</li>
-        <details><summary>Steps</summary>
+              <details><summary>Steps</summary>
           <pre># STRUCTURE: FIRST HOURS OF PROTOCOL RESEARCH
 1. ARCHITECTURE
    - read README and Deployment / addresses
@@ -195,6 +190,12 @@
    - Initialization / upgrade gaps
 </pre>
         </details>
+      <ul>
+        <li>Pragma version, imports, inheritances</li>
+        <li>State variables (visability)</li>
+        <li>Focus on <code>external</code> and <code>public</code> functions</li>
+        <li><code>Check-Effects-Interactions</code> pattern</li>
+        <li><code>S.E.A.R.C.H.</code> (State, External, Access, Reentrancy, Checks, Handling) pattern</li>
       </ul>
       <li>Testing (invariant tests -> stateless & stateful fuzzing, check hypotheses)</li>
       <li>Reporting</li>
