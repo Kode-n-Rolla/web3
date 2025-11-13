@@ -203,6 +203,7 @@
     </ol></details>
 
 <h2 align='center' id='assembyte'><em>Assembly and bytecode</em></h2>
+<a href='https://www.evm.codes/'>EVM Codes</a>
 <ol>
   <li><a href='#bytecode'>Bytecode</a></li>
 </ol>
