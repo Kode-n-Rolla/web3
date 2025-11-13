@@ -5,8 +5,9 @@
   <li><a href='#commands'>Help Commands</a></li>
   <li><a href='#foundry'>Foundry</a></li>
   <li><a href='#sol'>Solidity</a></li>
-  <li><a href=#tools>Tools</a>
+  <li><a href='#tools'>Tools</a>
   <li><a href='#researching'>Researching</a></li>
+  <li><a href='#assembyte'>Assembly and bytecode</a></li>
 </ol>
 
 <h2 align='center' id='commands'><em>Help Commands</em></h2>
@@ -80,7 +81,7 @@
     <pre><code>keccak256(abi.encodePacked(string1)) == keccak256(abi.encodePacked(string2))</code></pre>
 </ul>
 
-<h2 align='center' id='commands'><em>Tools</em></h2>
+<h2 align='center' id='tools'><em>Tools</em></h2>
 <ol>
   <li><a href='https://vscodium.com/'>VS Codium</a></li>
     <ul>
@@ -200,4 +201,14 @@
       <li>Testing (invariant tests -> stateless & stateful fuzzing, check hypotheses)</li>
       <li>Reporting</li>
     </ol></details>
-    
+
+<h2 align='center' id='assembyte'><em>Assembly and bytecode</em></h2>
+<ol>
+  <li><a href='#bytecode'>Bytecode</a></li>
+</ol>
+<h3 id='bytecode'> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <ins>Bytecode</ins></h3>
+<ul>
+  <li><code>f3</code> - return opcode</li>
+</ul>
+
+
