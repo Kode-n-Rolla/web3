@@ -57,6 +57,8 @@
   <li>Inspect</li>
     To view storage layout
     <pre><code>forge inspect CONTRACT_NAME storage-layout</code></pre>
+  <li>Coverage</li>
+    <pre><code>forge coverage</code></pre>
 </ul>
 
 <h3 id='funcs'> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <ins>Functions</ins></h3>
