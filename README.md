@@ -209,6 +209,7 @@
 <h3 id='bytecode'> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <ins>Bytecode</ins></h3>
 <ul>
   <li><code>f3</code> - return opcode</li>
+  <li><code>39</code> - code copy</li>
 </ul>
 
 
