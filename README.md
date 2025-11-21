@@ -165,7 +165,7 @@
         <li>Invariants</li>
       </ul>
       <li>Static Analysis (use tools)</li>
-      <li>Dynamic analysis (read the target code)</li>
+      <li>Dynamic analysis (read the target codebase)</li>
               <details><summary>Steps</summary>
           <pre># STRUCTURE: FIRST HOURS OF PROTOCOL RESEARCH
 1. ARCHITECTURE
