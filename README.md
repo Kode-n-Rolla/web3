@@ -52,12 +52,16 @@
   <li>Test</li>
     <ol>
       <li>Test certain function</li>
-      <pre><code>forge test --match-test testFunctionName -vvv</code></pre>
-      <code>-vvv</code> for deep verbose
+        <pre><code>forge test --match-test testFunctionName -vvv</code></pre>
+        <code>-vvv</code> for deep verbose, <code>--mp</code> (match-path) to certain path contract
     </ol>
   <li>Inspect</li>
-    To view storage layout
-    <pre><code>forge inspect CONTRACT_NAME storage-layout</code></pre>
+  <ol>
+      <li>To view storage layout</li>
+        <pre><code>forge inspect &lt;CONTRACT_NAME> storage-layout</code></pre>
+    <li>To view contract`s methods</li>
+        <pre><code>forge inspect &lt;CONTRACT_NAME> methods</code></pre>
+  </ol>
   <li>Coverage</li>
     <pre><code>forge coverage</code></pre>
 </ul>
