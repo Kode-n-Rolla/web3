@@ -11,12 +11,18 @@
 </ol>
 
 <h2 align='center' id='commands'><em>Help Commands</em></h2>
+<ol>
+  <li><a href='#interact'>Interact with blockchain via CLI</a></li>
+  <li><a href='#surya'>Surya</a></li>
+</ol>
 <ul>
+  <h3 id='interact'> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <ins>Interact with blockchain</ins></h3>
   <li>Interact with blockchain storage</li>
     <pre><code>curl -X POST [RPC_URL] -H "Content-Type: application/json" -d '{"jsonrpc":"2.0", "method":"eth_getStorageAt", "params": ["[CONTRACT_ADDRESS]","[NUM_SLOT-IN-HEX]","latest"],"id":1}'</code></pre>
     Need to change <code>[RPC_UR]</code>, <code>[CONTRACT_ADDRESS]</code>, <code>[NUM_SLOT-IN-HEX]</code>
-  <li>surya</li>
-  <ol>
+</ul>
+  <h3 id='surya'> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <ins>Surya</ins></h3>
+  <ul>
     <li>Graph creation</li>
       <pre><code>surya graph [PATH/CONTRACT_NAME].sol</code></pre>
     <li>Action to function trace</li>
@@ -24,8 +30,8 @@
         <pre><code>forge flatten src/[CONTRACT_NAME].sol > flat/[CONTRACT_NAME].flatten.sol</code></pre>
       2. <code>ftrace</code> with <code>flatten</code>
         <pre><code>surya ftrace "[CONTRACT_NAME]::[FUNCTION_NAME]" [all|external|internal] flatten/[CONTRACT_NAME].flat.sol</code></pre>
-  </ol>
-</ul>
+  </ul>
+
 
 <h2 align='center' id='foundry'><em>Foundry</em></h2>
 <ol>
