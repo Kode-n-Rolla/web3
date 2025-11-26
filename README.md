@@ -93,6 +93,10 @@
          <li><code>min</code>: The lower bound (inclusive) of the desired range.</li>
          <li><code>max</code>: The upper bound (inclusive) of the desired range.</li>
       </ol>
+  <li><code>vm.warp()</code> - skip some time</li>
+    <pre><code>vm.warp(block.timestamp + 10 seconds);</code></pre>
+  <li><code>vm.warp()</code> - skip some blocks</li>
+    <pre><code>vm.roll(block.number + 100);</code></pre>
 </ul>
 
 <h2 align='center' id='sol'><em>Solidity</em></h2>
