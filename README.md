@@ -186,8 +186,8 @@
         <li>Roles</li>
         <li>Invariants</li>
       </ul>
-      <li>Static Analysis (use tools)</li>
-      <li>Dynamic analysis (read the target codebase)</li>
+      <li>Static Analysis</li>
+      <li>Dynamic analysis</li>
               <details><summary>Steps</summary>
           <pre># STRUCTURE: FIRST HOURS OF PROTOCOL RESEARCH
 1. ARCHITECTURE
@@ -212,9 +212,11 @@
 6. CHECKLIST (rest)
    - Reentrancy
    - Privilege escalation
-   - Math errors
+   - Math errors (arithmetic, rounding)
    - Oracle manipulation
    - Initialization / upgrade gaps
+   - Access Control List
+   - Broken Logic
 </pre>
         </details>
       <ul>
