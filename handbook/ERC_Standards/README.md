@@ -1,0 +1,7 @@
+# ERC Standarts
+
+- ERC20
+- ERC721
+- ERC777
+- ERC1155
+- ERC4626
