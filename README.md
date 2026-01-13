@@ -12,10 +12,26 @@
 
 <h2 align='center' id='commands'><em>Help Commands</em></h2>
 <ol>
+  <li><a href='#install'>Install libraries</a></li>
   <li><a href='#interact'>Interact with blockchain via CLI</a></li>
   <li><a href='#surya'>Surya</a></li>
 </ol>
 <ul>
+  <h3 id='install'> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<ins>Install libraries</ins></h3>
+  <ul>
+    <li>Forge-std</li>
+    <pre><code>forge install foundry-rs/forge-std</code></pre>
+    <li>Open Zeppelin</li>
+    <pre><code>forge install OpenZeppelin/openzeppelin-contracts</code></pre>
+    <pre><code>forge install OpenZeppelin/openzeppelin-contracts-upgradeable</code></pre>
+    Configure <code>foundry.toml</code> (Remappings)
+    Example:
+    <pre><code>[profile.default]
+# ... other settings
+remappings = [
+    "@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
+    "@openzeppelin/contracts/=lib/openzeppelin-contracts-upgradeable/lib/openzeppelin-contracts/contracts/" # Also needed for standard contracts]</code></pre>
+  </ul>
   <h3 id='interact'> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <ins>Interact with blockchain</ins></h3>
   <li>Interact with blockchain storage</li>
     <pre><code>curl -X POST [RPC_URL] -H "Content-Type: application/json" -d '{"jsonrpc":"2.0", "method":"eth_getStorageAt", "params": ["[CONTRACT_ADDRESS]","[NUM_SLOT-IN-HEX]","latest"],"id":1}'</code></pre>
