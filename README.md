@@ -1,4 +1,4 @@
-# web3_security_path
+# Web3 Security Toolkit
 
 <h3>There are:</h3>
 <ol>
