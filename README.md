@@ -86,6 +86,8 @@ remappings = [
       <li>Test certain function</li>
         <pre><code>forge test --match-test testFunctionName -vvv</code></pre>
         <code>-vvv</code> for deep verbose, <code>--mp</code> (match-path) to certain path contract
+      <li>Gas Report</li>
+        <pre><code>forge test --gas-report</code></pre>
     </ol>
   <li>Inspect</li>
   <ol>
