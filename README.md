@@ -54,6 +54,7 @@ remappings = [
   <li><a href='#foundry-cast'>Cast</a></li>
   <li><a href='#foundry-forge'>Forge</a></li>
   <li><a href='#funcs'>Functions</a></li>
+  <li><a href='#tips'>Tips</a><</li>
 </ol>
 
 <h3 id='foundry-cast'> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <ins>Cast</ins></h3>
@@ -115,6 +116,21 @@ remappings = [
     <pre><code>vm.warp(block.timestamp + 10 seconds);</code></pre>
   <li><code>vm.warp()</code> - skip some blocks</li>
     <pre><code>vm.roll(block.number + 100);</code></pre>
+</ul>
+<h3 id='tips'> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <ins>Tips</ins></h3>
+<ul>
+      <li>Ok starting time, not start from 1 (<code>vm.warp</code>)</li>
+      <pre><code>    modifier startAtPresentDay() {
+        vm.warp(1680616584);
+        _;
+    }</code></pre>
+      <li>Fuzzing and assumption</li>
+      <pre><code>// notSeller will be chosen randomly
+function testInvalidSellerAddress(address notSeller) public {
+	vm.assume(notSeller != seller); // предпологается, что точно не `seller`
+	vm.expectRevert("not the seller");
+	depositContract.sellerWithdraw(notSeller);
+}</code></pre>
 </ul>
 
 <h2 align='center' id='sol'><em>Solidity</em></h2>
