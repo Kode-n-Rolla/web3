@@ -7,7 +7,7 @@
   <li><a href='https://github.com/Kode-n-Rolla/web3/blob/main/handbook/ERC-20_Edge_Cases/No-return-values.md'>No return value</a></li>
   <li><a href='https://github.com/Kode-n-Rolla/web3/blob/main/handbook/ERC-20_Edge_Cases/Blacklisted-addresses.md'>Blacklisted addresses</a></li>
   <li><a href='https://github.com/Kode-n-Rolla/web3/blob/main/handbook/ERC-20_Edge_Cases/Non-zero_approvals.md'>Subsequent non-zero approvals not allowed</a></li>
-  <li>Multiply addresses for a token</li>
+  <li><a href='https://github.com/Kode-n-Rolla/web3/blob/main/handbook/ERC-20_Edge_Cases/Multiple-token-addresses.md'>Multiply addresses for a token</a></li>
   <li>Upgradeable tokens</li>
   <li>Flash mintable tokens</li>
   <li>Transfer less than amount</li>
