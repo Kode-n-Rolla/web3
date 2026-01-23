@@ -9,7 +9,7 @@
   <li><a href='https://github.com/Kode-n-Rolla/web3/blob/main/handbook/ERC-20_Edge_Cases/Non-zero_approvals.md'>Subsequent non-zero approvals not allowed</a></li>
   <li><a href='https://github.com/Kode-n-Rolla/web3/blob/main/handbook/ERC-20_Edge_Cases/Multiple-token-addresses.md'>Multiply addresses for a token</a></li>
   <li><a href='https://github.com/Kode-n-Rolla/web3/blob/main/handbook/ERC-20_Edge_Cases/Upgradeable-tokens.md'>Upgradeable tokens</a></li>
-  <li>Flash mintable tokens</li>
+  <li><a href='https://github.com/Kode-n-Rolla/web3/blob/main/handbook/ERC-20_Edge_Cases/Flash-Mintable_Tokens.md'>Flash mintable tokens</a></li>
   <li>Transfer less than amount</li>
   <li>Tokens with lots of decimals</li>
   <li>Pausable tokens</li>
