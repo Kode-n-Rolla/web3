@@ -1,6 +1,6 @@
 ## ERC-20 Edge Cases
 <ol>
-  <li>Fee-on-transfer</li>
+  <li><a href='https://github.com/Kode-n-Rolla/web3/blob/main/handbook/ERC-20_Edge_Cases/Fee-on-transfer.md'>Fee-on-transfer</a></li>
   <li>Callbacks</li>
   <li>Return false VS reverting on failure</li>
   <li>Revert on zero address or 0 amount</li>
