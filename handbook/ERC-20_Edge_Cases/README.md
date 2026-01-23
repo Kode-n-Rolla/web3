@@ -11,7 +11,7 @@
   <li><a href='https://github.com/Kode-n-Rolla/web3/blob/main/handbook/ERC-20_Edge_Cases/Upgradeable-tokens.md'>Upgradeable tokens</a></li>
   <li><a href='https://github.com/Kode-n-Rolla/web3/blob/main/handbook/ERC-20_Edge_Cases/Flash-Mintable_Tokens.md'>Flash mintable tokens</a></li>
   <li><a href='https://github.com/Kode-n-Rolla/web3/blob/main/handbook/ERC-20_Edge_Cases/Transfer-Less-Than-amount.md'>Transfer less than amount</a></li>
-  <li>Tokens with lots of decimals</li>
+  <li><a href='https://github.com/Kode-n-Rolla/web3/blob/main/handbook/ERC-20_Edge_Cases/Tokens-With-High-Decimals-Precision.md'>Tokens with lots of decimals</a></li>
   <li>Pausable tokens</li>
   <li>Revert in large approvals or transfers</li>
 </ol>
