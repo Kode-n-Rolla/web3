@@ -13,5 +13,5 @@
   <li><a href='https://github.com/Kode-n-Rolla/web3/blob/main/handbook/ERC-20_Edge_Cases/Transfer-Less-Than-amount.md'>Transfer less than amount</a></li>
   <li><a href='https://github.com/Kode-n-Rolla/web3/blob/main/handbook/ERC-20_Edge_Cases/Tokens-With-High-Decimals-Precision.md'>Tokens with lots of decimals</a></li>
   <li><a href='https://github.com/Kode-n-Rolla/web3/blob/main/handbook/ERC-20_Edge_Cases/Transfer-Can-Be-Globally-Disabled.md'>Pausable tokens</a></li>
-  <li>Revert in large approvals or transfers</li>
+  <li><a href='https://github.com/Kode-n-Rolla/web3/blob/main/handbook/ERC-20_Edge_Cases/Revert-on-Large-Approvals-or-Transfers.md'>Revert in large approvals or transfers</a></li>
 </ol>
