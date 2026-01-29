@@ -145,7 +145,6 @@ function testInvalidSellerAddress(address notSeller) public {
     <ul>
       <li><a href='https://github.com/ConsenSysDiligence/vscode-solidity-metrics'>Solidity Metrics</a></li>
       <li><a href='https://marketplace.visualstudio.com/items?itemName=tintinweb.solidity-visual-auditor'>Solidity Visual Developer</a></li>
-      <li><a href='https://marketplace.visualstudio.com/items?itemName=Cyfrin.aderyn'>Aderyn</a></li>
       <li><a href='https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity'>Solidity (Wake)</a></li>
     </ul>
   <li><a href='https://getfoundry.sh/'>Foundry</a></li>
