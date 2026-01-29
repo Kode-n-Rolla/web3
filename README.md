@@ -6,6 +6,7 @@
   <li><a href='#foundry'>Foundry</a></li>
   <li><a href='#sol'>Solidity</a></li>
   <li><a href='#tools'>Tools</a>
+  <li><a href='#resources'>Resources</a></li>
   <li><a href='#researching'>Researching</a></li>
   <li><a href='#assembyte'>Assembly and bytecode</a></li>
 </ol>
@@ -152,7 +153,13 @@ function testInvalidSellerAddress(address notSeller) public {
   <li><a href='https://github.com/crytic/slither'>Slither</a></li>
   <li><a href='https://github.com/Cyfrin/aderyn'>Aderyn</a></li>
   <li><a href='https://upgradehub.xyz/'>upgradehub.xyz</a> for checking smart contracts changes</li>
-  <li><a href='https://github.com/Ackee-Blockchain/2025-workshop-fuzzing'>workshop-fuzzing</a> (<a href='https://ackee.xyz/blog/mastering-wake-printers-for-solidity-security-analysis/?utm_source=substack&utm_medium=email'>instructions & examples</a>)</li>
+</ol>
+
+<h2 align='center' id='resources'><em>Resources</em></h2>
+<ol>
+	<li> Auditors <a href='https://lab.guardianaudits.com/the-auditors-handbook/'>Handbook</a> from Guadrdian Audits Lab</li>
+	<li>Zokyo <a href='https://zokyo-auditing-tutorials.gitbook.io/zokyo-tutorials'>Tutorials</li>
+	<li><a href='https://github.com/Ackee-Blockchain/2025-workshop-fuzzing'>workshop-fuzzing</a> (<a href='https://ackee.xyz/blog/mastering-wake-printers-for-solidity-security-analysis/?utm_source=substack&utm_medium=email'>instructions & examples</a>)</li>
 </ol>
 
 <h2 align='center' id='researching'><em>Researching</em></h2>
