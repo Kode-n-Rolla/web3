@@ -5,7 +5,7 @@
   <li><a href='#commands'>Help Commands</a></li>
   <li><a href='#foundry'>Foundry</a></li>
   <li><a href='#sol'>Solidity</a></li>
-  <li><a href='#tools'>Tools</a>
+  <li><a href='#toolkit'>Toolkit</a>
   <li><a href='#resources'>Resources</a></li>
   <li><a href='#researching'>Researching</a></li>
   <li><a href='#assembyte'>Assembly and bytecode</a></li>
@@ -99,7 +99,12 @@ remappings = [
         <pre><code>forge inspect &lt;CONTRACT_NAME> methods</code></pre>
   </ol>
   <li>Coverage</li>
-    <pre><code>forge coverage</code></pre>
+   <ol>
+	   <li>Run</li>
+	    <pre><code>forge coverage</code></pre>
+	   <li>Can help with <code>Stack too deep</code></li>
+		<pre><code>forge coverage --ir-minimum</code></pre>
+   </ol>
 </ul>
 
 <h3 id='funcs'> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <ins>Functions</ins></h3>
@@ -140,7 +145,7 @@ function testInvalidSellerAddress(address notSeller) public {
     <pre><code>keccak256(abi.encodePacked(string1)) == keccak256(abi.encodePacked(string2))</code></pre>
 </ul>
 
-<h2 align='center' id='tools'><em>Tools</em></h2>
+<h2 align='center' id='toolkit'><em>Toolkit</em></h2>
 <ol>
   <li><a href='https://vscodium.com/'>VS Codium</a></li>
     <ul>
@@ -152,6 +157,7 @@ function testInvalidSellerAddress(address notSeller) public {
   <li><a href='https://github.com/AlDanial/cloc'>CLoC</a></li>
   <li><a href='https://github.com/crytic/slither'>Slither</a></li>
   <li><a href='https://github.com/Cyfrin/aderyn'>Aderyn</a></li>
+  <li><a href='https://github.com/trailofbits/eth-security-toolbox'>eth-security-toolbox</a></li>
   <li><a href='https://upgradehub.xyz/'>upgradehub.xyz</a> for checking smart contracts changes</li>
 </ol>
 
