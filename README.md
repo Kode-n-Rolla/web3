@@ -112,12 +112,15 @@ remappings = [
   <li><code>bound()</code></li>
     <p>The <code>bound()</code> function is designed to constrain the input values of fuzz tests within a specified range<p>
     <p>Usage:</p>
+	<pre><code>_value = bound(_value, 1, type(uint256).max);</code></pre>
       The <code>bound()</code> function takes three uint256 arguments:
       <ol>
          <li><code>x</code>: The input value from the fuzzer.</li>
          <li><code>min</code>: The lower bound (inclusive) of the desired range.</li>
          <li><code>max</code>: The upper bound (inclusive) of the desired range.</li>
       </ol>
+  <li>Another restriction for fuzzing</li>
+	<pre><code>vm.assume(_value > 0);</code></pre>
   <li><code>vm.warp()</code> - skip some time</li>
     <pre><code>vm.warp(block.timestamp + 10 seconds);</code></pre>
   <li><code>vm.warp()</code> - skip some blocks</li>
