@@ -146,6 +146,9 @@ function testInvalidSellerAddress(address notSeller) public {
 <ul>
   <li>Compare <code>string</code> type</li>
     <pre><code>keccak256(abi.encodePacked(string1)) == keccak256(abi.encodePacked(string2))</code></pre>
+ <li>Func sig</li>
+	<pre><code>bytes4 selector = bytes4(keccak256("transfer(address,uint256)"));</code></pre>
+	<pre><code>bytes4 selector = this.transfer.selector;</code></pre>
 </ul>
 
 <h2 align='center' id='toolkit'><em>Toolkit</em></h2>
