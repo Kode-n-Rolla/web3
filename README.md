@@ -25,13 +25,13 @@
     <li>Open Zeppelin</li>
     <pre><code>forge install OpenZeppelin/openzeppelin-contracts</code></pre>
     <pre><code>forge install OpenZeppelin/openzeppelin-contracts-upgradeable</code></pre>
-    Configure <code>foundry.toml</code> (Remappings)
+   <!-- Configure <code>foundry.toml</code> (Remappings)
     Example:
     <pre><code>[profile.default]
 # ... other settings
 remappings = [
     "@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
-    "@openzeppelin/contracts/=lib/openzeppelin-contracts-upgradeable/lib/openzeppelin-contracts/contracts/" # Also needed for standard contracts]</code></pre>
+    "@openzeppelin/contracts/=lib/openzeppelin-contracts-upgradeable/lib/openzeppelin-contracts/contracts/" # Also needed for standard contracts]</code></pre> -->
   </ul>
   <h3 id='interact'> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <ins>Interact with blockchain</ins></h3>
   <li>Interact with blockchain storage</li>
