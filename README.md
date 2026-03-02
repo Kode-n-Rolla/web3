@@ -16,6 +16,7 @@
   <li><a href='#install'>Install libraries</a></li>
   <li><a href='#interact'>Interact with blockchain via CLI</a></li>
   <li><a href='#surya'>Surya</a></li>
+  <li><a href='#wake'>Wake</a></li>
 </ol>
 <ul>
   <h3 id='install'> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<ins>Install libraries</ins></h3>
@@ -47,6 +48,14 @@ remappings = [
         <pre><code>forge flatten src/[CONTRACT_NAME].sol > flat/[CONTRACT_NAME].flatten.sol</code></pre>
       2. <code>ftrace</code> with <code>flatten</code>
         <pre><code>surya ftrace "[CONTRACT_NAME]::[FUNCTION_NAME]" [all|external|internal] flatten/[CONTRACT_NAME].flat.sol</code></pre>
+  </ul>
+  <h3 id='wake'> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <ins>Wake</ins></h3>
+  <ul>
+	  <li>Fix</li>
+		  <pre><code>forge remappings > remappings.txt</code></pre>
+	  	  <pre><code>wake up config</code></pre>
+      <li>Run</li>
+		  <pre><code>wake detect all</code></pre>
   </ul>
 
 
