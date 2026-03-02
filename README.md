@@ -65,7 +65,7 @@ remappings = [
   <li><a href='#foundry-cast'>Cast</a></li>
   <li><a href='#foundry-forge'>Forge</a></li>
   <li><a href='#funcs'>Functions</a></li>
-  <li><a href='#tips'>Tips</a><</li>
+  <li><a href='#tips'>Tips</a></li>
 </ol>
 
 <h3 id='foundry-cast'> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <ins>Cast</ins></h3>
