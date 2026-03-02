@@ -2,7 +2,7 @@
 
 <h3>There are:</h3>
 <ol>
-  <li><a href='#commands'>Help Commands</a></li>
+  <li><a href='#help'>Help</a></li>
   <li><a href='#foundry'>Foundry</a></li>
   <li><a href='#sol'>Solidity</a></li>
   <li><a href='#toolkit'>Toolkit</a>
@@ -11,7 +11,7 @@
   <li><a href='#assembyte'>Assembly and bytecode</a></li>
 </ol>
 
-<h2 align='center' id='commands'><em>Help Commands</em></h2>
+<h2 align='center' id='help'><em>Help</em></h2>
 <ol>
   <li><a href='#install'>Install libraries</a></li>
   <li><a href='#interact'>Interact with blockchain via CLI</a></li>
@@ -54,6 +54,7 @@ remappings = [
 	  <li>Fix</li>
 		  <pre><code>forge remappings > remappings.txt</code></pre>
 	  	  <pre><code>wake up config</code></pre>
+	  	  Settings -> Add <code>wake.toml</code> to <code>Wake > Configuration:Toml_path</code>
       <li>Run</li>
 		  <pre><code>wake detect all</code></pre>
   </ul>
