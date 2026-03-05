@@ -57,7 +57,7 @@ remappings = [
 	  	  <pre><code>wake up config</code></pre>
 	  	  Settings -> Add <code>wake.toml</code> to <code>Wake > Configuration:Toml_path</code>
       <li>Run</li>
-		  <pre><code>wake detect all</code></pre>
+		  <pre><code>wake detect --export json all</code></pre>
   </ul>
 
 
