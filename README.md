@@ -26,6 +26,7 @@
     <li>Open Zeppelin</li>
     <pre><code>forge install OpenZeppelin/openzeppelin-contracts</code></pre>
     <pre><code>forge install OpenZeppelin/openzeppelin-contracts-upgradeable</code></pre>
+	<pre><code>forge install transmissions11/solmate</code></pre>
    <!-- Configure <code>foundry.toml</code> (Remappings)
     Example:
     <pre><code>[profile.default]
