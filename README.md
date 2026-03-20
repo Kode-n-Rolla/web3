@@ -5,8 +5,8 @@
   <li><a href='#help'>Help</a></li>
   <li><a href='#foundry'>Foundry</a></li>
   <li><a href='#sol'>Solidity</a></li>
-  <li><a href='#toolkit'>Toolkit</a>
   <li><a href='#solana'>Solana</a></li>
+  <li><a href='#toolkit'>Toolkit</a>
   <li><a href='#resources'>Resources</a></li>
   <li><a href='#researching'>Researching</a></li>
   <li><a href='#assembyte'>Assembly and bytecode</a></li>
@@ -163,6 +163,12 @@ function testInvalidSellerAddress(address notSeller) public {
 	<pre><code>bytes4 selector = this.transfer.selector;</code></pre>
 </ul>
 
+<h2 align='center' id='solana'><em>Solana</em></h2>
+<ol>
+	<li>Change to <code>devnet</code></li>
+		<pre><code>solana config set --url https://api.devnet.solana.com</code></pre>
+</ol>
+
 <h2 align='center' id='toolkit'><em>Toolkit</em></h2>
 <ol>
   <li><a href='https://vscodium.com/'>VS Codium</a></li>
@@ -178,12 +184,6 @@ function testInvalidSellerAddress(address notSeller) public {
   <li><a href='https://github.com/Cyfrin/aderyn'>Aderyn</a></li>
   <li><a href='https://github.com/trailofbits/eth-security-toolbox'>eth-security-toolbox</a></li>
   <li><a href='https://upgradehub.xyz/'>upgradehub.xyz</a> for checking smart contracts changes</li>
-</ol>
-
-<h2 align='center' id='solana'><em>Solana</em></h2>
-<ol>
-	<li>Change to <code>devnet</code></li>
-		<pre><code>solana config set --url https://api.devnet.solana.com</code></pre>
 </ol>
 
 <h2 align='center' id='resources'><em>Resources</em></h2>
