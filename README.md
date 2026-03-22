@@ -164,10 +164,24 @@ function testInvalidSellerAddress(address notSeller) public {
 </ul>
 
 <h2 align='center' id='solana'><em>Solana</em></h2>
-<ol>
-	<li>Change to <code>devnet</code></li>
-		<pre><code>solana config set --url https://api.devnet.solana.com</code></pre>
-</ol>
+<ul>
+	<li>Commands</li>
+	<ol>
+		<li>Change to <code>devnet</code></li>
+			<pre><code>solana config set --url https://api.devnet.solana.com</code></pre>
+		<li>Start anchor</li>
+			<pre><code>anchor init project_name
+cd project_name
+anchor build
+anchor keys sync</code></pre>
+		<li>Solana test validator running in other terminal</li>
+			<pre><code>solana-test-validator</code></pre>
+		<li>Solana logs in another:</li>
+			<pre><code>solana logs</code></pre>
+		<li>Test</li>
+			<pre><code>anchor test --skip-local-validator</code></pre>
+	</ol>
+</ul>
 
 <h2 align='center' id='toolkit'><em>Toolkit</em></h2>
 <ol>
