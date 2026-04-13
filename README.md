@@ -180,6 +180,8 @@ anchor keys sync</code></pre>
 			<pre><code>solana logs</code></pre>
 		<li>Test</li>
 			<pre><code>anchor test --skip-local-validator</code></pre>
+		<li>Add <code>Lite SVM</code></li>
+			<pre><code>cargo add --dev litesvm</code></pre>
 	</ol>
 </ul>
 
